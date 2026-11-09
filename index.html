@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>庄园小游戏 · Three.js</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="panel">
+      <div class="row"><span class="label">🍎 收集</span><span id="score">0</span> / <span id="total">0</span></div>
+      <div class="row"><span class="label">⏱ 时间</span><span id="timer">00:00</span></div>
+    </div>
+  </div>
+
+  <!-- 开始遮罩 -->
+  <div id="overlay" class="overlay">
+    <div class="card">
+      <h1>🏡 庄园漫步</h1>
+      <p class="sub">在庄园里收集所有发光的苹果！</p>
+      <ul class="keys">
+        <li><b>W A S D</b> / 方向键 &nbsp;移动</li>
+        <li><b>鼠标拖动</b> &nbsp;旋转视角</li>
+        <li><b>滚轮</b> &nbsp;缩放</li>
+        <li><b>Shift</b> &nbsp;奔跑</li>
+      </ul>
+      <button id="startBtn">开始游戏</button>
+    </div>
+  </div>
+
+  <!-- 胜利遮罩 -->
+  <div id="winOverlay" class="overlay hidden">
+    <div class="card">
+      <h1>🎉 全部收集完成！</h1>
+      <p class="sub">用时 <span id="winTime">00:00</span></p>
+      <button id="againBtn">再玩一次</button>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

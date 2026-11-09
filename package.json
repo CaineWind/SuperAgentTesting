@@ -1,0 +1,12 @@
+{
+  "name": "super-agent-testing",
+  "version": "1.0.0",
+  "description": "庄园漫步 - 一个 three.js 3D 庄园小游戏",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve . -l 4321",
+    "dev": "npx --yes serve . -l 4321"
+  },
+  "keywords": ["three.js", "game", "3d", "manor"],
+  "license": "MIT"
+}
